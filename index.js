@@ -87,7 +87,8 @@ app.get('/api', function (req, res) {
             /* Gelen Verileri Satır Satır Ayırma Ve İlk Baştaki 6 Satırı Silme İşlemi */
             var result = response.split("\n");
             result = result.splice(6, result.length + 1);
-
+            result = result.splice(0, result.length - 2);
+            
             /* Her Bir Satiri Dolasma Islemi */
             result.forEach(element => {
                 var depremString = element.split(" ");
